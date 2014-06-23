@@ -1,0 +1,138 @@
+﻿@model SickFriday.Models.Ranking
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Ranking</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date)
+                @Html.ValidationMessageFor(model => model.Date)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.First, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.First)
+                @Html.ValidationMessageFor(model => model.First)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Second, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Second)
+                @Html.ValidationMessageFor(model => model.Second)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Third, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Third)
+                @Html.ValidationMessageFor(model => model.Third)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fourth, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fourth)
+                @Html.ValidationMessageFor(model => model.Fourth)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fifth, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fifth)
+                @Html.ValidationMessageFor(model => model.Fifth)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Sixth, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Sixth)
+                @Html.ValidationMessageFor(model => model.Sixth)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Seventh, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Seventh)
+                @Html.ValidationMessageFor(model => model.Seventh)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Eight, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Eight)
+                @Html.ValidationMessageFor(model => model.Eight)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BuyIn, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BuyIn)
+                @Html.ValidationMessageFor(model => model.BuyIn)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WinFirst, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WinFirst)
+                @Html.ValidationMessageFor(model => model.WinFirst)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WinSecond, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WinSecond)
+                @Html.ValidationMessageFor(model => model.WinSecond)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WinThird, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WinThird)
+                @Html.ValidationMessageFor(model => model.WinThird)
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

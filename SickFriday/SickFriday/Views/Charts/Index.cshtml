@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-header">
+    <h1>Charts</h1> <br />
+    <p>
+        Wenn du lieber Charts anschauen möchtest, bist du hier genau richtig.<br />
+        Hier bekommst du eine Übersicht über alle Punkte,Anwesenheiten und Input/Win über alle Spieler.
+    </p>
+</div>
+<br />
+
+<div class="tabbable">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#pane1" data-toggle="tab">Punkte</a></li>
+        <li><a href="#pane2" data-toggle="tab">Anwesenheit</a></li>
+        <li><a href="#pane3" data-toggle="tab">Input/Win</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="pane1" class="tab-pane active">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Punkte</h2>
+                    <img src="@Url.Action("Points")" alt="" />
+                </div>
+            </div>
+        </div>
+        <div id="pane2" class="tab-pane">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Anwesenheiten</h2>
+                    <img src="@Url.Action("Presence")" alt="" />
+                </div>
+            </div>
+        </div>
+        <div id="pane3" class="tab-pane">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Ausgaben/Einnahmen</h2>
+                    <img src="@Url.Action("Input")" alt="" />
+                </div>
+            </div>
+        </div>
+    </div><!-- /.tab-content -->
+</div><!-- /.tabbable -->
+
+
+

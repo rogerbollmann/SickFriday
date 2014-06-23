@@ -1,0 +1,97 @@
+﻿@model SickFriday.Models.Ranking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ranking</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.First)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.First)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Second)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Second)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Third)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Third)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fourth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fourth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fifth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fifth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sixth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sixth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seventh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seventh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyIn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

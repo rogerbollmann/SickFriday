@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>SickFriday</h1>
+    <p class="lead">SickFriday ist eine private Poker Gruppe, welchen jeden Freitag zusammen Poker spielen</p>
+    <img src="../Images/sickfriday.jpg" width="1000" height="500" />
+    
+    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Ranking</h2>
+        <p>
+            Hier kannst du eine Übersicht über alle gespielten Pokerspiele sehen
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index","Ranking")">Ranking</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Player</h2>
+        <p>Hier kannst du eine Übersicht über die Statistik per Spieler finden</p>
+        <p><a class="btn btn-default" href="@Url.Action("Index","User")">Spieler</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Charts</h2>
+        <p>Wenn du lieber Grafiken siehst, dann bist du hier richtig</p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Charts")">Charts</a></p>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+﻿@model IEnumerable<SickFriday.Models.Ranking>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="page-header">
+    <h1>Ranking</h1> <br />
+    <p>
+        Anhand vom Platz welcher erreicht wurde, werden Punkte vergeben, welche in der Statistik nachgeführt werden.<br />
+        1.Platz ergibt immer 8 Punkte, 2.Platz 7 Punkte, 3.Platz 6 Punkte usw.<br />
+        Der Pot wird unter den ersten 3 Platzierten aufgeteilt: 1.Platz 50%, 2.Platz 30% und 3.Platz 20%.<br />
+    </p>
+</div>
+
+<br />
+@if (User.IsInRole("Admin")) {
+    @Html.ActionLink("Create New", "Create")
+}
+
+        @using (Html.BeginForm("Index","Ranking", FormMethod.Get))
+        {
+            <br />
+            <p>Search: @Html.DropDownList("searchString", "All") <br /><br />
+            <input type="submit" value="Search" /></p> 
+        }
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Second)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Third)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fourth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fifth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sixth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seventh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Eight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuyIn)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Second)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Third)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fourth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fifth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sixth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Seventh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyIn)
+            </td>
+            @if (User.IsInRole("Admin"))
+            {
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            }
+            else
+            {
+                <td></td>
+            }
+        </tr>
+    }
+
+</table>
